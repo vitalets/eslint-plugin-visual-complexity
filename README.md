@@ -1,6 +1,6 @@
 # eslint-plugin-visual-complexity
 
-A custom eslint rule to check code [complexity](https://eslint.org/docs/latest/rules/complexity) without optional chaining
+A custom eslint rule to check code [complexity](https://eslint.org/docs/latest/rules/complexity) without optional chaining.
 
 ## Example
 Treats the following function with a complexity **1** not **4**:
@@ -20,26 +20,26 @@ Official request for providing an option to disable the new behavior was [discar
 ## Usage
 
 1. Install the package
-```
-npm install -D eslint-plugin-visual-complexity
-```
+  ```
+  npm install -D eslint-plugin-visual-complexity
+  ```
 
 2. Import and use plugin in `eslint.config.js`:
-```js
-import visualComplexity from "eslint-plugin-visual-complexity";
+  ```js
+  import visualComplexity from "eslint-plugin-visual-complexity";
 
-export default [
-  {
-    plugins: {
-      'visual-complexity': visualComplexity, // <- add the plugin
-    },
-    rules: {
-      'visual-complexity/complexity': ['error', { max: 4 }],
-      complexity: 0, // <- disable core complexity rule
+  export default [
+    {
+      plugins: {
+        'visual-complexity': visualComplexity, // <- add the plugin
+      },
+      rules: {
+        'visual-complexity/complexity': ['error', { max: 4 }],
+        complexity: 0, // <- disable core complexity rule
+      }
     }
-  }
-]
-```
+  ]
+  ```
 
 ## License
 [MIT](https://github.com/vitalets/eslint-plugin-visual-complexity/blob/main/LICENSE)
