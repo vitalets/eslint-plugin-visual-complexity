@@ -35,7 +35,7 @@ function f(a) {
 ```
 
 ## Motivation
-Starting from eslint v9, the algorithm of calculating complexity was [changed](https://github.com/eslint/eslint/issues/18060). Now it counts complexity for optional chaining / optional call expressions. While it's inline with the cyclomatic complexity formula, these expressions don't increase the _visual complexity_ of the code.
+Starting from v9, eslint [changed](https://github.com/eslint/eslint/issues/18060) the algorithm of calculating complexity. Now it additionally counts complexity for optional chaining / optional call expressions. While it matches the cyclomatic complexity formula, these expressions don't increase the _visual complexity_ of the code.
 
 After updating to eslint v9, you may need to increase the complexity threshold in the config, because of optional chaining in your code. In turn, this allows complex functions pass your eslint check as well.
 
