@@ -1,5 +1,10 @@
 # eslint-plugin-visual-complexity
 
+[![lint](https://github.com/vitalets/eslint-plugin-visual-complexity/actions/workflows/lint.yaml/badge.svg)](https://github.com/vitalets/eslint-plugin-visual-complexity/actions/workflows/lint.yaml)
+[![test](https://github.com/vitalets/eslint-plugin-visual-complexity/actions/workflows/test.yaml/badge.svg)](https://github.com/vitalets/eslint-plugin-visual-complexity/actions/workflows/test.yaml)
+[![npm version](https://img.shields.io/npm/v/eslint-plugin-visual-complexity)](https://www.npmjs.com/package/eslint-plugin-visual-complexity)
+[![license](https://img.shields.io/npm/l/eslint-plugin-visual-complexity)](https://github.com/vitalets/eslint-plugin-visual-complexity/blob/main/LICENSE)
+
 A custom eslint rule to check code [complexity](https://eslint.org/docs/latest/rules/complexity) without optional chaining.
 
 ## Example
