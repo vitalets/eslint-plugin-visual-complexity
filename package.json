@@ -5,6 +5,10 @@
   "engines": {
     "node": ">=18"
   },
+  "files": [
+    "index.js",
+    "README.md"
+  ],
   "scripts": {
     "prepare": "git config core.hooksPath .hooks",
     "lint": "eslint .",
