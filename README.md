@@ -58,7 +58,7 @@ Official request for providing an option to disable the new behavior was [discar
           'visual-complexity': visualComplexity,
         },
         rules: {
-          'visual-complexity/complexity': ['error', { max: 4 }],
+          'visual-complexity/complexity': ['error', { max: 6 }],
           complexity: 0, // <- disable core complexity rule
         }
       }
