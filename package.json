@@ -1,0 +1,35 @@
+{
+  "name": "eslint-plugin-visual-complexity",
+  "version": "0.1.0",
+  "description": "Enforce a visual complexity of the code",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "prepare": "git config core.hooksPath .hooks",
+    "lint": "eslint .",
+    "prettier": "prettier --check --ignore-unknown .",
+    "prettier:w": "prettier --write --ignore-unknown .",
+    "test": "node index.test.js",
+    "release": "./release.sh"
+  },
+  "peerDependencies": {
+    "eslint": ">=7"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.9.1",
+    "eslint": "9.9.1",
+    "globals": "15.9.0",
+    "prettier": "3.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vitalets/eslint-plugin-visual-complexity.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "complexity"
+  ],
+  "license": "MIT"
+}
