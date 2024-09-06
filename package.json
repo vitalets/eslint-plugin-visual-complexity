@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-visual-complexity",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Enforce a visual complexity of the code",
   "engines": {
     "node": ">=18"
