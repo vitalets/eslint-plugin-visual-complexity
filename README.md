@@ -38,22 +38,22 @@ Official request for providing an option to disable the new behavior was [discar
 
 ## Usage
 
-1. Install the package
+1. Install the package:
     ```
     npm install -D eslint-plugin-visual-complexity
     ```
 
-2. Import and use plugin in `eslint.config.js`:
+2. Import and use the plugin in `eslint.config.js`:
     ```js
-    import visualComplexity from "eslint-plugin-visual-complexity"; // <- import the plugin
+    import visualComplexity from "eslint-plugin-visual-complexity";
 
     export default [
       {
         plugins: {
-          'visual-complexity': visualComplexity, // <- add the plugin
+          'visual-complexity': visualComplexity,
         },
         rules: {
-          'visual-complexity/complexity': ['error', { max: 4 }], // <- set complexity rule
+          'visual-complexity/complexity': ['error', { max: 4 }],
           complexity: 0, // <- disable core complexity rule
         }
       }
