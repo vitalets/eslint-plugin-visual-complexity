@@ -7,9 +7,10 @@
 
 A custom eslint rule to check code [complexity](https://eslint.org/docs/latest/rules/complexity) without optional chaining.
 
-## Example
+## Motivation
+Starting from v9, eslint [changed](https://github.com/eslint/eslint/issues/18060) the algorithm of calculating cyclomatic complexity of the code. Now it additionally counts [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining). While it matches the complexity formula, these expressions don't actually increase the _visual complexity_.
 
-Counts the complexity of the following function as **1**, not **4**:
+For example, the following function has complexity **4** by the core eslint rule:
 
 ```js
 function f(a) {
@@ -17,7 +18,7 @@ function f(a) {
 }
 ```
 
-Complexity **4**, calculated by the core eslint rule, means the function above is equivalent to:
+It means the function is equivalent to:
 ```js
 function f(a) {
   if (condition) {
@@ -33,13 +34,12 @@ function f(a) {
   }
 }
 ```
+But visually they are quite different. 
 
-## Motivation
-Starting from v9, eslint [changed](https://github.com/eslint/eslint/issues/18060) the algorithm of calculating complexity. Now it additionally counts complexity for optional chaining / optional call expressions. While it matches the cyclomatic complexity formula, these expressions don't increase the _visual complexity_ of the code.
+This plugin extends core eslint rule and 
+turns off optional chaining during complexity calculation. It outputs **1** for the first function and **4** for the second one.
 
-After updating to eslint v9, you may need to increase the complexity threshold in the config, because of optional chaining in your code. In turn, this allows complex functions pass your eslint check as well.
-
-Official request for providing an option to disable the new behavior was [discarded](https://github.com/eslint/eslint/issues/18432). That's why this package appeared.
+> There was a request to provide a built-in option to disable optional chaining counting, but it was [discarded](https://github.com/eslint/eslint/issues/18432).
 
 ## Usage
 
