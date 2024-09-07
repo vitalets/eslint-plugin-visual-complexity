@@ -55,10 +55,10 @@ Official request for providing an option to disable the new behavior was [discar
     export default [
       {
         plugins: {
-          'visual-complexity': visualComplexity,
+          visual: visualComplexity,
         },
         rules: {
-          'visual-complexity/complexity': ['error', { max: 6 }],
+          'visual/complexity': ['error', { max: 6 }],
           complexity: 0, // <- disable core complexity rule
         }
       }
