@@ -10,7 +10,7 @@ A custom eslint rule to check code [complexity](https://eslint.org/docs/latest/r
 ## Motivation
 Starting from v9, eslint [changed](https://github.com/eslint/eslint/issues/18060) the algorithm of calculating cyclomatic complexity of the code. Now it additionally counts [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining). While it matches the complexity formula, these expressions don't actually increase the _visual complexity_.
 
-For example, the following function has complexity **4** by the core eslint rule:
+For example, the following function has a complexity **4** by the core eslint rule:
 
 ```js
 function f(a) {
@@ -36,8 +36,8 @@ function f(a) {
 ```
 But visually they are quite different. 
 
-This plugin extends core eslint rule and 
-turns off optional chaining during complexity calculation. It outputs **1** for the first function and **4** for the second one.
+This plugin extends eslint `complexity` rule and 
+kicks out optional chaining during calculation. It outputs **1** for the first function and **4** for the second one.
 
 > There was a request to provide a built-in option to disable optional chaining counting, but it was [discarded](https://github.com/eslint/eslint/issues/18432).
 
