@@ -58,7 +58,7 @@ kicks out optional chaining during calculation. It outputs **1** for the first f
           visual: visualComplexity,
         },
         rules: {
-          'visual/complexity': ['error', { max: 6 }],
+          "visual/complexity": ["error", { max: 6 }],
           complexity: 0, // <- disable core complexity rule
         }
       }
